@@ -5,8 +5,8 @@
   -->
 
 ## Contato
-- [LinkedIn]([[https://www.linkedin.com/seu-perfil](https://www.linkedin.com/in/daniel-oliveira-aba552251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)](https://www.linkedin.com/in/daniel-oliveira-aba552251/))
-<!--- [Website](https://www.seu-site.com)-->
+- [LinkedIn](https://www.linkedin.com/in/daniel-oliveira-aba552251/)
+
 - Email: daniel0333v@gmail.com
 
 <div>
