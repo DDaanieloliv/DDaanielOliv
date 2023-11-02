@@ -5,9 +5,10 @@
   -->
 
 ## Contato
+- Email: daniel0333v@gmail.com
 - [LinkedIn](https://www.linkedin.com/in/daniel-oliveira-aba552251/)
 
-- Email: daniel0333v@gmail.com
+
 
 <div>
         <img src="https://github-readme-stats.vercel.app/api?username=DDaanieloliv&show_icons=true&count_private=true&hide=prs&theme=radical" alt="Estatísticas do GitHub">
