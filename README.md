@@ -6,7 +6,7 @@
 
 ## Contato
 - Email: daniel0333v@gmail.com
-- [LinkedIn](https://www.linkedin.com/in/daniel-oliveira-aba552251/)
+- LinkedIn: https://www.linkedin.com/in/daniel-oliveira-aba552251/
 
 
 
