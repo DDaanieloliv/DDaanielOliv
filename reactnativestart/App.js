@@ -3,12 +3,16 @@ import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { View, Text } from 'react-native';
+import { TouchableOpacity } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
+import FabButton from './src/components/FapButton';
 
 // Componente de tela para a página
 const ScreenComponent = () => {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Conteúdo da Página</Text>
+      {/* <Text>Conteúdo da Página</Text> */}
+      
     </View>
   );
 };
@@ -21,7 +25,7 @@ const DrawerContent = (props) => {
   return (
     // Personalize o conteúdo do seu drawer aqui
     <View>
-      <Text>Drawer Content</Text>
+      <Text>Lista de Hospitais</Text>
     </View>
   );
 };
@@ -53,6 +57,19 @@ const HomeStack = () => {
             textShadowColor: 'grey',
             textShadowOffset: { width: 2, height: 2 },
           },
+
+           headerRight: () => (
+            <TouchableOpacity
+              style={{ marginRight: 20 }}
+              onPress={() => {
+                // Adicione a ação que você deseja realizar ao pressionar o botão FAB
+                // Por exemplo, navegar para outra tela
+                navigation.navigate('OutraTela');
+              }}
+            >
+              <MaterialIcons name="add" size={30} color="#2feb8a" />
+            </TouchableOpacity>
+          ),
         }}
       />
       {/* Adicione mais telas do Drawer conforme necessário */}
@@ -65,6 +82,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <HomeStack />
+      <FabButton 
+      style={{ bottom: 80, right: 60}} />
     </NavigationContainer>
   );
 }
