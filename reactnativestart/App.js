@@ -45,8 +45,8 @@ const DrawerContent = (props) => {
 // Componente principal de navegação
 const HomeStack = () => {
   return (
-    <Drawer.Navigator drawerContent={DrawerContent} > {/* theme={MyTheme} Aplicando o tema personalizado*/}
-     
+    <Drawer.Navigator drawerContent={DrawerContent}> 
+    {/* theme={MyTheme} Aplicando o tema personalizado*/}
       <Drawer.Screen name="NearHosptal" component={ScreenComponent} 
         options={{
           
@@ -93,7 +93,7 @@ const HomeStack = () => {
 // App principal
 export default function App() {
   return (
-    <NavigationContainer > {/* theme={MyTheme} Aplicando o tema personalizado*/}
+    <NavigationContainer> {/* theme={MyTheme} Aplicando o tema personalizado*/}
       <HomeStack /> 
       <FabButton 
       style={{ bottom: 80, right: 60}} />

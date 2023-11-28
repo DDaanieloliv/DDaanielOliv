@@ -59,21 +59,21 @@ export default class FabButton extends Component {
         return (
             <View style={[styles.container , this.props.style]}>
         
-                <TouchableWithoutFeedback onPress={ () => alert('Curtir')}>
+                <TouchableWithoutFeedback onPress={ () => alert('Traçar Rota')}>
                     <Animated.View style={[styles.button, styles.submenu , likeStyle]}>
                         <MaterialIcons name="directions" size={20} color='#2feb8a' /> {/*color='#fff'*/}
                     </Animated.View>
                 </TouchableWithoutFeedback>
         
-                <TouchableWithoutFeedback onPress={ () => alert('Camera')}>
-                    <Animated.View style={[styles.button, styles.submenu, cameraStyle   ]}>
+                <TouchableWithoutFeedback onPress={ () => alert('Lista')}>
+                    <Animated.View style={[styles.button, styles.submenu, cameraStyle]}>
                         <Entypo name="list" size={20} color='#2feb8a' /> {/*color='#fff'*/}
                     </Animated.View>
                 </TouchableWithoutFeedback>
         
                 <TouchableWithoutFeedback onPress={this.toggleMenu} >
                     <Animated.View style={[styles.button, styles.menu , rotation]}>
-                        <AntDesign name="plus" size={24} color='#2feb8a' /> {/*color='#fff'*/} 
+                        <AntDesign name="plus" size={24} color='black' /> {/*color='#fff'*/} 
                     </Animated.View>
                 </TouchableWithoutFeedback>
             </View>
