@@ -1,11 +1,23 @@
 // Importações necessárias
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer , DefaultTheme} from '@react-navigation/native';
 import { View, Text } from 'react-native';
 import { TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import FabButton from './src/components/FapButton';
+
+
+// Seção de temas para ajustar a cor do ícone do menu
+// const MyTheme = {
+//   ...DefaultTheme,
+//   colors: {
+//     ...DefaultTheme.colors,
+//     primary: '#2feb8a',  Defina a cor desejada aqui
+//   },
+// };
+
+
 
 // Componente de tela para a página
 const ScreenComponent = () => {
@@ -33,7 +45,8 @@ const DrawerContent = (props) => {
 // Componente principal de navegação
 const HomeStack = () => {
   return (
-    <Drawer.Navigator drawerContent={DrawerContent}>
+    <Drawer.Navigator drawerContent={DrawerContent} > {/* theme={MyTheme} Aplicando o tema personalizado*/}
+     
       <Drawer.Screen name="NearHosptal" component={ScreenComponent} 
         options={{
           
@@ -58,18 +71,18 @@ const HomeStack = () => {
             textShadowOffset: { width: 2, height: 2 },
           },
 
-           headerRight: () => (
-            <TouchableOpacity
-              style={{ marginRight: 20 }}
-              onPress={() => {
-                // Adicione a ação que você deseja realizar ao pressionar o botão FAB
-                // Por exemplo, navegar para outra tela
-                navigation.navigate('OutraTela');
-              }}
-            >
-              <MaterialIcons name="add" size={30} color="#2feb8a" />
-            </TouchableOpacity>
-          ),
+          //  headerRight: () => (
+          //   <TouchableOpacity
+          //     style={{ marginRight: 20 }}
+          //     onPress={() => {
+          //         Adicione a ação que você deseja realizar ao pressionar o botão FAB
+          //         Por exemplo, navegar para outra tela
+          //       navigation.navigate('OutraTela');
+          //     }}
+          //   >
+          //     <MaterialIcons name="add" size={30} color="#2feb8a" />
+          //   </TouchableOpacity>
+          // ),
         }}
       />
       {/* Adicione mais telas do Drawer conforme necessário */}
@@ -80,8 +93,8 @@ const HomeStack = () => {
 // App principal
 export default function App() {
   return (
-    <NavigationContainer>
-      <HomeStack />
+    <NavigationContainer > {/* theme={MyTheme} Aplicando o tema personalizado*/}
+      <HomeStack /> 
       <FabButton 
       style={{ bottom: 80, right: 60}} />
     </NavigationContainer>

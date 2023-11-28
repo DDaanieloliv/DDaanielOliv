@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { View, Text , StyleSheet, TouchableWithoutFeedback , Animated} from "react-native-web";
-import { AntDesign, Entypo } from '@expo/vector-icons'
+import { AntDesign, Entypo, MaterialIcons } from '@expo/vector-icons'
+
 
 export default class FabButton extends Component {
 
@@ -60,19 +61,19 @@ export default class FabButton extends Component {
         
                 <TouchableWithoutFeedback onPress={ () => alert('Curtir')}>
                     <Animated.View style={[styles.button, styles.submenu , likeStyle]}>
-                        <AntDesign name="heart" size={20} color='#fff' />
+                        <MaterialIcons name="directions" size={20} color='#2feb8a' /> {/*color='#fff'*/}
                     </Animated.View>
                 </TouchableWithoutFeedback>
         
                 <TouchableWithoutFeedback onPress={ () => alert('Camera')}>
                     <Animated.View style={[styles.button, styles.submenu, cameraStyle   ]}>
-                        <Entypo name="camera" size={20} color='#fff' />
+                        <Entypo name="list" size={20} color='#2feb8a' /> {/*color='#fff'*/}
                     </Animated.View>
                 </TouchableWithoutFeedback>
         
                 <TouchableWithoutFeedback onPress={this.toggleMenu} >
                     <Animated.View style={[styles.button, styles.menu , rotation]}>
-                        <AntDesign name="plus" size={24} color='#fff' />
+                        <AntDesign name="plus" size={24} color='#2feb8a' /> {/*color='#fff'*/} 
                     </Animated.View>
                 </TouchableWithoutFeedback>
             </View>
@@ -100,12 +101,20 @@ const styles = StyleSheet.create({
         }
     },
     menu: {
-        backgroundColor: '#00213b'
+        // backgroundColor: '#00213b',
+        backgroundColor: 'white',
+        shadowColor: 'black',
+        shadowOffset: { width: 2, height: 2 },
+        shadowOpacity: 0.4,
     },
     submenu: {
         width: 48,
         height: 48,
         borderRadius: 48 / 2,
-        backgroundColor: '#00213b'
+        // backgroundColor: '#00213b'
+        backgroundColor: 'white',
+        shadowColor: 'black',
+        shadowOffset: { width: 2, height: 2 },
+        shadowOpacity: 0.4,
     }
 });
